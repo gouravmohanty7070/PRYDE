@@ -32,6 +32,8 @@ Contents
 <li>Python
 <br/>
 <li>Machine Learning Models
+<br/>
+<li>Metaverse
 </ol>
 
 ### Features Added
@@ -82,3 +84,5 @@ health - Pryde will be the first of its kind.
 ### Snapshots
 --
 ![](https://res.cloudinary.com/divr26z8e/image/upload/v1679001362/Website_Launch_Gradient_With_Laptop_And_Phone_Mockup_Mobile_Video_Instagram_Post_Square_1_w1uzzk.gif)
+![](https://res.cloudinary.com/divr26z8e/image/upload/v1679001363/Website_Launch_Gradient_With_Laptop_And_Phone_Mockup_Mobile_Video_Instagram_Post_Square_3_jhissh.gif)
+![](https://res.cloudinary.com/divr26z8e/image/upload/v1679001364/Website_Launch_Gradient_With_Laptop_And_Phone_Mockup_Mobile_Video_Instagram_Post_Square_2_aytgne.gif)
