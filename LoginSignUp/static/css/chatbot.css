@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.chatbot-section {
+  background-color: #ffffff;
+}
+
+.chatbot-container {
+  margin: 0 10%;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+/* <--------- image --------> */
+
+.chatbot-img-container {
+  width: 50%;
+}
+
+.chatbot-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* <--------- content and button --------> */
+
+.chatbot-content-container {
+  width: 50%;
+}
+
+.chatbot-heading {
+  font-weight: 700;
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: #2d033b;
+}
+
+.chatbot-description {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 50px;
+  color: #2d033b;
+}
+
+.chatbot-btn {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 5px 30px;
+  color: #2d033b;
+  background-color: #ffffff;
+  border: 2px solid #2d033b;
+  cursor: pointer;
+  background: linear-gradient(to left, #ffffff 50%, #2d033b 50%) right;
+  background-size: 200% 100%;
+  background-position: right;
+  transition: all 0.5s ease-in-out;
+}
+
+.chatbot-btn:hover {
+  background-position: left;
+  color: #ffffff;
+}

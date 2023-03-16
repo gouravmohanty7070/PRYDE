@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/LoveBoothStyles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/NavbarStyles.css' %}" />
+    <!----- Google Font CDN ----->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>LoveBooth</title>
+  </head>
+  <body>
+    <!----------- NavBar Section------------>
+    {% include 'shared/navbar.html' %}
+    <!----------- Hero Section ------------>
+
+    <div class="header-image">
+      <div class="header-heading-box">
+        <p class="header-heading">You Deserve Everything.</p>
+        <image
+          class="lovebooth-img"
+          src="{% static 'images/pamper-45.jpg' %}"
+        ></image>
+      </div>
+    </div>
+
+    <section class="main-section">
+      <div class="main-container">
+        <div class="container">
+          <div class="content-container">
+            <h3 class="feeling-heading">How are you feeling today?</h3>
+            <div class="btn-container">
+              <a href="/youMatter?emotion=PrideAndHappiness" class="feeling-btn"
+                >Pride and happiness</a
+              >
+              <a
+                href="/youMatter?emotion=DiscriminationAndPain"
+                class="feeling-btn"
+                >Discrimination and pain</a
+              >
+              <a
+                href="/youMatter?emotion=AcceptanceAndSupport"
+                class="feeling-btn"
+                >Acceptance and support</a
+              >
+              <a href="/youMatter?emotion=Ambivalence" class="feeling-btn"
+                >Ambivalence</a
+              >
+            </div>
+          </div>
+          <div class="img-container">
+            <image class="img" src="{% static 'images/eggs.jfif' %}"></image>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="img-container">
+            <image class="img" src="{% static 'images/music.jpg' %}"></image>
+          </div>
+          <div class="content-container">
+            <image
+              class="web-logo"
+              src="{% static 'images/Spotify.png' %}"
+            ></image>
+            <p class="description">
+              {% if emotion %} Experience the power of Music, Here is the
+              playlist based on your current mood: {% else %} Please select what
+              you feel {% endif %}
+            </p>
+            {% if emotion %}
+            <a href="{{ song_url }}" target="_blank">
+              <button class="play-btn">Play Now!</button>
+            </a>
+            {% else %}
+            <button class="play-btn">Select Emotion</button>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="content-container">
+            <image
+              class="web-logo"
+              src="{% static 'images/netflixlogo.png' %}"
+            ></image>
+            <p class="description">
+              {% if emotion %} Feeling {{emotion}}!, Here is a movie based on your current mood{% else %}{% endif %}
+            </p>
+            {% if emotion %}
+            <a href="{{ movie_url }}" target="_blank">
+              <button class="play-btn">Watch Now!</button>
+            </a>
+            {% else %}
+            <button class="play-btn">Select Emotion</button>
+            {% endif %}
+          </div>
+          <div class="img-container">
+            {% if movie_url %}
+            <image class="img" src="{{movie_url}}"></image>
+            {% else %}
+            <image class="img" src="{% static 'images/movie.jpg' %}"></image>
+            {% endif %}
+          </div>
+        </div>
+
+        <!-- <div class="container">
+          <div class="img-container">
+            <image
+              class="img"
+              src="{% static 'images/community.jpg' %}"
+            ></image>
+          </div> -->
+          <!-- <div class="content-container">
+            <p class="description">
+              Yes!, we are here too. Don’t forget to connect with your color, In
+              your city.
+            </p>
+            <a href="/videoCall/"
+              ><button class="play-btn">Let's connect!</button></a
+            >
+          </div> -->
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

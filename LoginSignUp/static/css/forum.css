@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #fff;
+  font-family: "Raleway", sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+}
+.header {
+  height: 10%;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+}
+.wrapper-header {
+  height: 100%;
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.project-header {
+  width: 18%;
+}
+
+.options-header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  font-family: Lexend Deca;
+  font-weight: 400;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30%;
+}
+
+.dummy-header {
+  color: #9c69e2;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.name-header {
+  font-weight: 600;
+}
+
+.heading {
+  font-size: 32px;
+  color: rgba(0, 0, 0, 0.694);
+  font-family: cursive;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.msgs {
+  margin: 0 10%;
+  padding-bottom: 5%;
+  /* height: calc( 90vh - 100px ); */
+  /* border-radius: 20px;
+    background-color: #fcf3ef;
+    border-bottom: 2px solid gainsboro; */
+  /* overflow: auto; */
+}
+/* .input{
+    width: 100%;
+    height: 10vh;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width: 80%;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid gainsboro;
+    background-color: transparent;
+    padding: 10px;
+    padding-right: 60px;
+
+} */
+
+i {
+  /* position: absolute;
+    font-size: 30px;
+    right: 5%;
+    cursor: pointer;
+    color: rgb(160, 160, 160); */
+  margin-right: 10px;
+}
+.chat {
+  /* margin: 10px 0; */
+  background: #cbd3e7;
+  /* Border */
+
+  border: 1px solid #eaeaea;
+  box-sizing: border-box;
+  /* Shadow */
+
+  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 2% 2%;
+  margin-bottom: 2%;
+}
+.msg {
+  background-color: #6e7ea5;
+  border-radius: 20px;
+  width: fit-content;
+  padding: 5px 15px;
+  margin: 15px;
+  color: #ffffff;
+  font-size: 15px;
+}
+.details {
+  height: 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+.details > .name {
+  font-size: 1rem;
+  font-family: Roboto, sans-serif;
+  color: black;
+}
+.pic > img {
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.forum-header-img {
+  background-image: url("../images/forum-header-img.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+}
+
+.forum-header-filter {
+  background: rgba(229, 184, 244, 0.5);
+  height: 500px;
+}
+
+.navbar {
+  z-index: 1;
+}
+
+.forum-heading {
+  background-color: #ffffff;
+  color: #2d033b;
+  font-family: Roboto, sans-serif;
+  font-size: 5rem;
+  padding: 8px 0;
+  position: absolute;
+  top: 280px;
+  left: 35%;
+  text-align: center;
+  width: 30%;
+}
+
+.input-box {
+  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+  margin: 3% 10%;
+  padding: 2% 3%;
+  background: #cbd3e7;
+}
+
+input {
+  border: 2px solid #eaeaea;
+  border-radius: 5px;
+  width: 100%;
+  padding: 1%;
+  font-size: 1rem;
+  outline: none;
+}
+
+.submit {
+  background: #6e7ea5;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 1% 2%;
+  margin-top: 20px;
+  margin-left: 89%;
+  width: 120px;
+  height: 40px;
+}

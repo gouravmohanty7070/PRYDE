@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/conversation.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/NavbarStyles.css' %}" />
+    <!------ Font Awesome CDN ------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!----- Google Font CDN ----->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- <--------- NavBar Section---------->
+    {% include 'shared/navbar.html' %}
+
+    <!----------- conversation ------------>
+
+    <div class="conversation-section">
+      <div class="conversation-container" id="msg-container">
+        <div class="message-bar-container">
+          <div class="message-bar">
+            Hello! I'm Pryde Bot. How can I help you?
+          </div>
+          <div class="profile-container">
+            <img
+              src="../../static/images/user2.png"
+              alt="profile"
+              class="profile-img"
+            />
+          </div>
+        </div>
+        <!-- <div class="message-bar-container2">
+          <div class="message-bar2">Please help me!</div>
+          <div class="profile-container2">
+            <img
+              src="../../static/images/user2.png"
+              alt="profile"
+              class="profile-img"
+            />
+          </div>
+        </div> -->
+      </div>
+      <div class="search-and-btn-container">
+        <div id="input-form" >
+          <textarea
+            cols="30"
+            rows="1"
+            class="main-input"
+            placeholder="Enter your query..."
+            id="user-input"
+            name="user_input"
+          ></textarea>
+          <button  class="main-search-btn" type="submit" onclick="sendUserInput()">
+            Go
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+        var messageContainer = document.getElementById("msg-container");
+        function formatResponse(a) {
+            return `<div class="message-bar-container">
+                <div class="message-bar">
+                    ${a}
+                </div>
+                <div class="profile-container">
+                    <img src="../../static/images/user2.png" alt="profile" class="profile-img" />
+                </div>
+            </div>`;
+        }
+
+        function processData(data){
+          console.log(data)
+          var messageContainer = document.getElementById('msg-container')
+          messageContainer.innerHTML = messageContainer.innerHTML + `<div     class="message-bar-container">
+              <div class="message-bar">
+                ${data.data}
+              </div>
+              <div class="profile-container">
+                <img
+                  src="../../static/images/user2.png"
+                  alt="profile"
+                  class="profile-img"
+                />
+              </div>
+            </div>`
+        }
+        
+        async function sendUserInput(e) {
+          //e.preventDefault()
+          console.log("function called")
+          var input = document.getElementById("user-input").value;
+          console.log(input)
+          var messageContainer = document.getElementById('msg-container')
+          messageContainer.innerHTML = messageContainer.innerHTML + `        <div class="message-bar-container2">
+          <div class="message-bar2">${input}</div>
+          <div class="profile-container2">
+            <img
+              src="../../static/images/user2.png"
+              alt="profile"
+              class="profile-img"
+            />
+          </div>
+        </div>`
+        document.getElementById("user-input").value = ''
+          // var xhr = new XMLHttpRequest();
+          // xhr.onreadystatechange = function() {
+          //   if (xhr.readyState == XMLHttpRequest.DONE) {
+          //     var response = JSON.parse(xhr.responseText).response;
+          //     var formatted = formatResponse(response);
+          //     messageContainer.innerHTML += formatted;
+          //   }
+          // }
+          // xhr.open('POST', '/conversation/');
+          // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+          // xhr.send('user_input=' + input);
+          await fetch('/conversation/', {
+            method: 'POST',
+            body: JSON.stringify(input)
+          }).then((response) => response.json())
+          .then(response => processData(response))
+
+          return false
+        }
+    </script>    
+</html>

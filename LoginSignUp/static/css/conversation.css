@@ -1,0 +1,162 @@
+/* <<<========= conversation =========>>> */
+
+.conversation-section {
+  background-color: #cbd3e7;
+  height: 100vh;
+  text-align: center;
+  overflow: scroll;
+}
+
+.conversation-container {
+  margin: 0 20%;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.search-and-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: #6e7ea5;
+  backdrop-filter: blur(10px);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* <<<---------------------    Input bar    --------------------->>> */
+
+.main-input {
+  width: 100%;
+  color: #000000;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  resize: none;
+  overflow: hidden;
+}
+
+textarea::placeholder {
+  color: #8e8e8e;
+  align-content: center;
+  font-weight: 300;
+  letter-spacing: 0;
+}
+
+/* <<<---------------------    Search btn    --------------------->>> */
+
+.main-search-btn,
+.search-icon {
+  color: #ffffff;
+  background-color: #55076f;
+}
+
+.main-search-btn {
+  padding: 10px 20px;
+  border-radius: 7px;
+  font-size: 1.2rem;
+  margin-left: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.search-icon {
+  padding-left: 5px;
+  font-size: 1rem;
+}
+
+.main-search-btn:hover {
+  background-color: #6c3999;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-search-btn:hover > .search-icon {
+  background-color: #6c3999;
+  transition: all 0.3s ease-in-out;
+}
+
+/* <<<---------------------    Message bar    --------------------->>> */
+
+.message-bar-container {
+  display: flex;
+  padding-top: 0;
+  padding-bottom: 30px;
+  position: relative;
+  margin-right: 70px;
+}
+
+.main-container:last-child {
+  margin-bottom: 120px;
+}
+
+.profile-container {
+  background-color: #6e7ea5;
+  padding: 12px 10px 8px 10px;
+  border-radius: 50px;
+  margin-right: 30px;
+  position: absolute;
+}
+.profile-img {
+  width: 30px;
+  height: auto;
+  margin: auto;
+}
+
+.message-bar {
+  color: #000000;
+  /* background-color: #692496; */
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px 20px;
+  line-height: 2rem;
+  margin-left: 70px;
+  text-align: left;
+}
+/* <<<---------------------    Message bar 2   --------------------->>> */
+
+.message-bar-container2 {
+  display: flex;
+  padding-bottom: 30px;
+  margin-left: 70px;
+  position: relative;
+  justify-content: flex-end;
+}
+
+.main-container:first-child {
+  margin-top: 100px;
+}
+
+.main-container:last-child {
+  margin-bottom: 80px;
+}
+
+.profile-container2 {
+  background-color: #6e7ea5;
+  padding: 12px 10px 8px 10px;
+  border-radius: 50px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.profile-img2 {
+  width: 30px;
+  height: auto;
+  margin: auto;
+}
+
+.message-bar2 {
+  color: #000000;
+  /* background-color: #4A266A; */
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px 20px;
+  line-height: 2rem;
+  margin-right: 70px;
+  text-align: left;
+}

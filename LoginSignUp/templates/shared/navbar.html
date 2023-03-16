@@ -1,0 +1,37 @@
+<section class="nav-section">
+  <div class="nav-container">
+    <div class="links-container">
+      <div class="logo-div">
+        <a href="/">
+          <image
+            class="logo"
+            src="../../static/images/prydefinal logo.png"
+          ></image>
+        </a>
+      </div>
+      <div class="links-div">
+        {% if request.user.is_authenticated %}
+        <a href="/prydebot/" class="links">PrydeBot</a>
+        <a href="/forum/" class="links">Forum</a>
+        <a href="/blogs/" class="links">Blogs</a>
+        <a href="/youMatter/" class="links">You Matter</a>
+        <a href="/knowmore/" class="links">About</a>
+        {% endif %}
+      </div>
+    </div>
+    {% if not request.user.is_authenticated %}
+    <div class="btn-div">
+      <a href="{% url 'loginUser' %}">
+        <button class="login-btn">Login</button>
+      </a>
+      <button class="signUp-btn">SignUp</button>
+    </div>
+    {% else %}
+    <div class="btn-div">
+      <a href="{% url 'logoutUser' %}">
+        <button class="login-btn">Logout</button>
+      </a>
+    </div>
+    {% endif %}
+  </div>
+</section>

@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 76px;
+  position: fixed;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 999;
+}
+
+/* <--------- Links & logo --------> */
+
+.links-container {
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.logo {
+  width: 120px;
+  margin-right: 120px;
+  cursor: pointer;
+}
+
+.links {
+  font-size: 1rem;
+  text-decoration: none !important;
+  color: #2d033b;
+  font-weight: 400;
+  margin-right: 30px;
+  padding: 6px 20px;
+  border-radius: 7px;
+}
+
+.links:hover {
+  color: #ffffff;
+  background-color: #2d033b;
+  transition: all 0.2s ease-in-out;
+}
+
+/* <--------- Login & SignUp Buttons --------> */
+
+.btn-div {
+  margin-right: 2%;
+}
+
+.login-btn {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-right: 30px;
+  padding: 3px 35px;
+  color: #2d033b;
+  background-color: #ffffff;
+  border: 2px solid #2d033b;
+  cursor: pointer;
+  background: linear-gradient(to left, #ffffff 50%, #2d033b 50%) right;
+  background-size: 200% 100%;
+  background-position: right;
+  transition: all 0.5s ease-in-out;
+}
+
+.login-btn:hover {
+  background-position: left;
+  color: #ffffff;
+}
+
+.signUp-btn {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-right: 30px;
+  padding: 3px 28px;
+  color: #ffffff;
+  background-color: #2d033b;
+  border: 2px solid #2d033b;
+  cursor: pointer;
+  background: linear-gradient(to left, #2d033b 50%, #ffffff 50%) right;
+  background-size: 200% 100%;
+  background-position: right;
+  transition: all 0.5s ease-in-out;
+}
+
+.signUp-btn:hover {
+  background-position: left;
+  color: #2d033b;
+}
