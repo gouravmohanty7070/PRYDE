@@ -12,6 +12,7 @@ Contents
  * [Features Added](#Features-Added)
  * [Competitive Advantage](#Competitive-Advantage)
  * [Snapshots](#Snapshots)
+ * [Demo Video](#Demo-Video)
 
 
 ### Installation
@@ -84,10 +85,8 @@ health - Pryde will be the first of its kind.
 ### Snapshots
 --
 ![](https://res.cloudinary.com/divr26z8e/image/upload/v1679001362/Website_Launch_Gradient_With_Laptop_And_Phone_Mockup_Mobile_Video_Instagram_Post_Square_1_w1uzzk.gif)
-![](https://res.cloudinary.com/divr26z8e/image/upload/v1679001363/Website_Launch_Gradient_With_Laptop_And_Phone_Mockup_Mobile_Video_Instagram_Post_Square_3_jhissh.gif)
-![](https://res.cloudinary.com/divr26z8e/image/upload/v1679001364/Website_Launch_Gradient_With_Laptop_And_Phone_Mockup_Mobile_Video_Instagram_Post_Square_2_aytgne.gif)
 
 ### Demo Video
 
-Link: https://drive.google.com/file/d/1ZNXcI7rUa59H6Q_J-waIafBcKF6W6GDJ/view?usp=sharing
+[![LIVE DEMO]](https://youtu.be/p20_crA7IQg)
 
