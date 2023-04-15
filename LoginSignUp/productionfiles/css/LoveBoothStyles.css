@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.main-container {
+  margin: 0 0%;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 405px;
+}
+
+.content-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+/* <--------- hero image --------> */
+
+.header-image {
+  margin-top: 80px;
+  margin-bottom: -7px;
+  position: relative;
+  z-index: -1;
+}
+
+.lovebooth-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.header-heading {
+  position: absolute;
+  left: 31%;
+  top: 35%;
+  background-color: #ffffff;
+  color: #fa9f91;
+  padding: 20px 60px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* <--------- image --------> */
+
+.img-container {
+  width: 50%;
+  object-fit: contain;
+}
+
+.img {
+  width: 100%;
+}
+
+/* <--------- feeling btn --------> */
+
+.feeling-heading {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #2d033b;
+  margin-bottom: 40px;
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.feeling-btn {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #2d033b;
+  border: 2px solid #2d033b;
+  border-radius: 7px;
+  padding: 20px 20px;
+}
+
+.feeling-btn:hover {
+  color: #ffffff;
+  background-color: #2d033b;
+  transition: all 0.3s ease-in-out;
+}
+
+/* <--------- Music section --------> */
+
+.web-logo {
+  width: 200px;
+}
+
+.description {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #2d033b;
+  margin: 20px 130px;
+}
+
+.play-btn {
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2d033b;
+  background-color: #ffffff;
+  border: 2px solid #2d033b;
+  border-radius: 7px;
+  padding: 10px 30px;
+}
+
+.play-btn:hover {
+  color: #ffffff;
+  background-color: #2d033b;
+  transition: all 0.3s ease-in-out;
+}

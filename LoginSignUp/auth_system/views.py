@@ -3,9 +3,11 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 # @login_required
+@csrf_exempt
 def HomePage(request):
     # if request.user.is_authenticated:
     #     return render(request, 'auth_system/index.html', {})
@@ -13,12 +15,14 @@ def HomePage(request):
     #     return redirect("auth-page")
     return render(request, 'auth_system/index.html', {})
 
+@csrf_exempt
 def AuthenticationView(request):
     if request.user.is_authenticated:
         return redirect("home-page")
     else:
         return render(request, 'auth_system/register.html')
-    
+
+@csrf_exempt
 def registerUser(request):
     if request.method == 'POST':
         print(request.POST)
@@ -47,6 +51,7 @@ def registerUser(request):
     else:
         return redirect("auth-page")
 
+@csrf_exempt
 def loginUser(request):
     if request.method == 'POST':
         print(request.POST)
@@ -66,6 +71,7 @@ def loginUser(request):
     else:
         return redirect("auth-page")
 
+@csrf_exempt
 def logoutUser(request):
      logout(request)
      return redirect('loginUser') 
