@@ -78,7 +78,7 @@ individuality is celebrated) and business.
 cater to an underrepresented section of the society and ensure
 that they're living their lives in a happy and beautiful manner.
 There have been attempts to cater to the mental health of LGBTQ+
-community which Team Blueberry Muffins acknowledges and hopes
+community which our team acknowledges and hopes
 they would only succeed in the near future, however, for sexual
 health - Pryde will be the first of its kind.
 </li></br>
@@ -94,5 +94,5 @@ https://pryde-ekbf57bcyq-uc.a.run.app/
 
 ### Demo Video
 
-[![LIVE DEMO]](https://youtu.be/p20_crA7IQg)
+[![LIVE DEMO]](https://drive.google.com/drive/u/0/folders/1RtNYG9XfR96zo9BmhDZcL5Sj3pwxvYkP)
 
